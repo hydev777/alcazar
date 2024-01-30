@@ -7,6 +7,7 @@ import '../register/ui/pages/register_step1.dart';
 import '../register/ui/pages/register_step2.dart';
 import '../register/ui/pages/register_step3.dart';
 import '../register/ui/pages/register_step4.dart';
+import '../register/ui/pages/register_step5.dart';
 import '../splash/splash.dart';
 
 final router = GoRouter(
@@ -43,6 +44,10 @@ final router = GoRouter(
     GoRoute(
       path: '/register-step4',
       builder: (context, state) => const RegisterStep4(),
+    ),
+    GoRoute(
+      path: '/register-step5',
+      builder: (context, state) => const RegisterStep5(),
     ),
   ],
 );

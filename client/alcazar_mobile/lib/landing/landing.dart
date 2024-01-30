@@ -70,7 +70,9 @@ class _LandingState extends State<Landing> {
                         Color(0xFF333333),
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      context.push('/register-step1');
+                    },
                     child: const Text(
                       "Registrate",
                       style: TextStyle(
