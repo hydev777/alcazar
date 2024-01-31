@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -73,18 +74,24 @@ class _LoginState extends State<Login> {
                     height: 12,
                   ),
                   RichText(
-                    text: const TextSpan(
-                      style: TextStyle(
+                    text: TextSpan(
+                      style: const TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.w500,
                         color: Color(0xFF333333),
                       ),
                       children: <TextSpan>[
-                        TextSpan(
+                        const TextSpan(
                           text: "¿No tienes una cuenta?",
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
-                        TextSpan(text: " Registrate"),
+                        TextSpan(
+                          text: " Registrate",
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              context.push('/register-step1');
+                            },
+                        ),
                       ],
                     ),
                   ),

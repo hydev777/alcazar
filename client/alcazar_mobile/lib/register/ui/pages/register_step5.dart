@@ -140,6 +140,75 @@ class _RegisterStep5State extends State<RegisterStep5> {
                                 ],
                               ),
                             ),
+                            SizedBox(
+                              height: 56,
+                              child: Row(
+                                children: [
+                                  const SizedBox(
+                                    width: 155,
+                                    child: TextField(
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                      ),
+                                      decoration: InputDecoration(
+                                        filled: true,
+                                        label: Text(
+                                          "Correo",
+                                          style: TextStyle(fontSize: 12),
+                                        ),
+                                        contentPadding: EdgeInsets.only(
+                                          left: 16,
+                                          top: 4,
+                                          bottom: 4,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 5,
+                                  ),
+                                  DropdownMenu<String>(
+                                    width: 107,
+                                    initialSelection: selectedValue,
+                                    onSelected: (String? value) {
+                                      selectedValue = value!;
+                                    },
+                                    label: const Text(
+                                      "Rol",
+                                      style: TextStyle(fontSize: 12),
+                                    ),
+                                    inputDecorationTheme:
+                                        const InputDecorationTheme(
+                                      filled: true,
+                                      contentPadding: EdgeInsets.only(
+                                        left: 16,
+                                        top: 4,
+                                        bottom: 4,
+                                      ),
+                                      constraints:
+                                          BoxConstraints(maxHeight: 49),
+                                    ),
+                                    dropdownMenuEntries: [
+                                      "Agente",
+                                      "2",
+                                      "3",
+                                      "4",
+                                      "5"
+                                    ].map<DropdownMenuEntry<String>>(
+                                        (String value) {
+                                      return DropdownMenuEntry<String>(
+                                        value: value,
+                                        label: value,
+                                      );
+                                    }).toList(),
+                                  ),
+                                  IconButton(
+                                    onPressed: () {},
+                                    icon: const Icon(Icons.delete_outline),
+                                  )
+                                ],
+                              ),
+                            ),
                             const SizedBox(
                               height: 16,
                             ),
@@ -178,9 +247,7 @@ class _RegisterStep5State extends State<RegisterStep5> {
                               Color(0xFF333333),
                             ),
                           ),
-                          onPressed: () {
-                            context.push("/register-step5");
-                          },
+                          onPressed: () {},
                           child: const Text(
                             "Invitar",
                             style: TextStyle(

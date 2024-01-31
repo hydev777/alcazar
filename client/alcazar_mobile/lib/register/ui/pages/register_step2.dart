@@ -76,13 +76,6 @@ class _RegisterStep2State extends State<RegisterStep2> {
                         obscuringCharacter: '*',
                         blinkWhenObscuring: true,
                         animationType: AnimationType.fade,
-                        // validator: (v) {
-                        //   if (v!.length < 3) {
-                        //     return "I'm from validator";
-                        //   } else {
-                        //     return null;
-                        //   }
-                        // },
                         pinTheme: PinTheme(
                           shape: PinCodeFieldShape.box,
                           borderRadius: BorderRadius.circular(5),
